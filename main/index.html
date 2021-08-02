@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      outline: olive solid 1px; /*위치잡기위한 가상 라인*/
+    }
+    ol, li, body {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    /* 메인메뉴 */
+    .mainMenu {
+      padding-top: 30px;
+      display: flex; /*header 메뉴 가로로 배열*/
+      /* flex-direction: row; 정방향 순서대로 배열 */
+      /* flex-wrap: nowrap; 줄바꿈 안됨( overflow됨 ) */
+      flex-flow: row nowrap; /*flex-direction, flex-wrap을 한번에 쓸수 있음*/
+      justify-content: space-around; /*가로부분을 균등한 간격으로 배열*/
+      align-items: center; /*세로부분을 가운데로 배열*/
+      background-color: #ff0000;
+    }
+    /* 메뉴 */
+    header>ol>ul>li {
+      flex-basis: 150px;/*flex-direction이 row일 때는 너비, column일 때는 높이*/
+      font-size: 23px;
+    }
+    /* 히든 메뉴 */
+    .subMenu {
+      display: flex;
+      justify-content: space-around;
+      background-color: #f56666;
+      
+      z-index: 1;
+    }
+    .subMenu li {
+      flex-basis: 150px;
+    }
+    .subMenuContain {
+      visibility: hidden;
+    }
+    /* .mainContainer {
+     width: 100vw;
+     height: 100vh;
+    } */
+    
+  </style>
+</head>
+<body>
+  <header>
+  <ol>
+    <ul class="mainMenu">
+      <li>LOGO</li>
+      <li style="font-size: 40px;">tid-bit</li>
+      <li>our</li>
+      <li>sandwich</li>
+      <li>beverage</li>
+      <li>board</li>
+      <li>contact us</li>
+      <li>map</li>
+    </ul>
+  </ol>
+</header>
+<ol class="subMenuContain">
+  <ul class="subMenu">
+  <li></li>
+  <li style="font-size: 40px;"></li>
+  <li>
+  <div>tid-bit란?</div>
+  <div>mind11</div>
+  </li>
+  <li>
+  <div>club</div>
+  <div>chicken</div>
+  <div>mushroom</div>
+  </li>
+  <li>
+  <div>coffee</div>
+  <div>juice</div>
+  <div>soft drink</div>
+  </li>
+  <li>
+  <div>게시판</div>
+  </li>
+  <li>
+  <div>call</div>
+  <div>apps</div>
+  </li>
+  <li>
+  <div>매장위치</div>
+  </li>
+</ul>
+</ol>
+<main class="mainContainer">
+</div>
+</main>
+</body>
+</html>
